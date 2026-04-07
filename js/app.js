@@ -7,7 +7,7 @@
 // After deploying the backend to Render, replace the URL below with your
 // Render service URL (e.g. https://mediafetch-api.onrender.com)
 const IS_LOCAL = window.location.hostname === 'localhost' ||
-                 window.location.hostname === '127.0.0.1';
+  window.location.hostname === '127.0.0.1';
 const API_BASE = IS_LOCAL
   ? 'http://localhost:3001'
   : 'https://mediafetch-api.onrender.com';  // ← UPDATE THIS after Render deploy
@@ -21,10 +21,10 @@ let state = {
 
 // ─── DOM Refs ─────────────────────────────────────────────────────────────────
 let urlInput, fetchBtn, fetchSpinner, fetchIcon,
-    resultSection, skeletonCard, mediaCard,
-    videoFormatsGrid, audioFormatsGrid,
-    downloadBtn, downloadBtnLabel, downloadBtnSpinner, downloadBtnIcon,
-    progressBar, progressFill, progressText;
+  resultSection, skeletonCard, mediaCard,
+  videoFormatsGrid, audioFormatsGrid,
+  downloadBtn, downloadBtnLabel, downloadBtnSpinner, downloadBtnIcon,
+  progressBar, progressFill, progressText;
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
 function showToast(message, type = 'info', duration = 4000) {
@@ -273,22 +273,22 @@ function setDownloadingState(isDownloading) {
 // ─── Init ─────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // DOM refs
-  urlInput         = document.getElementById('url-input');
-  fetchBtn         = document.getElementById('fetch-btn');
-  fetchSpinner     = document.getElementById('fetch-spinner');
-  fetchIcon        = document.getElementById('fetch-icon');
-  resultSection    = document.getElementById('result-section');
-  skeletonCard     = document.getElementById('skeleton-card');
-  mediaCard        = document.getElementById('media-card');
+  urlInput = document.getElementById('url-input');
+  fetchBtn = document.getElementById('fetch-btn');
+  fetchSpinner = document.getElementById('fetch-spinner');
+  fetchIcon = document.getElementById('fetch-icon');
+  resultSection = document.getElementById('result-section');
+  skeletonCard = document.getElementById('skeleton-card');
+  mediaCard = document.getElementById('media-card');
   videoFormatsGrid = document.getElementById('video-formats-grid');
   audioFormatsGrid = document.getElementById('audio-formats-grid');
-  downloadBtn      = document.getElementById('download-btn');
+  downloadBtn = document.getElementById('download-btn');
   downloadBtnLabel = document.getElementById('download-btn-label');
   downloadBtnSpinner = document.getElementById('download-btn-spinner');
-  downloadBtnIcon  = document.getElementById('download-btn-icon');
-  progressBar      = document.getElementById('progress-bar');
-  progressFill     = document.getElementById('progress-fill');
-  progressText     = document.getElementById('progress-text');
+  downloadBtnIcon = document.getElementById('download-btn-icon');
+  progressBar = document.getElementById('progress-bar');
+  progressFill = document.getElementById('progress-fill');
+  progressText = document.getElementById('progress-text');
 
   // Event listeners
   fetchBtn.addEventListener('click', fetchVideo);
