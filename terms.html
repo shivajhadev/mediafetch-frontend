@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Shiyos Media, A product of Shiyos Technologies.</title>
+  <meta name="description"
+    content="Read the Shiyos Media Terms of Service. Use our platform responsibly and in accordance with copyright law." />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+
+  <style>
+    main {
+      flex: 1;
+      padding: 8rem 1.5rem 5rem;
+      max-width: 52rem;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ── Page Hero ───────────────────────────────────────────────────── */
+    .policy-hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-hero h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--on-surface);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .policy-hero .updated {
+      font-size: 0.82rem;
+      color: var(--on-surface-variant);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary), var(--tertiary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Policy Card ──────────────────────────────────────────────────── */
+    .policy-card {
+      background: var(--surface-container);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.25rem;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ── Section ──────────────────────────────────────────────────────── */
+    .policy-section {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .section-num {
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem;
+      border-radius: 50%;
+      background: rgba(158, 255, 200, 0.12);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.15rem;
+    }
+
+    .section-body h2 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--on-surface);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-body p {
+      font-size: 0.88rem;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+    }
+
+    .section-body ul {
+      margin-top: 0.5rem;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .section-body ul li {
+      font-size: 0.88rem;
+      color: var(--on-surface-variant);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-body ul li::before {
+      content: '';
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .section-body a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section-body a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Warning banner ─────────────────────────────────────────────── */
+    .warn-banner {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      background: rgba(255, 200, 80, 0.07);
+      border: 1px solid rgba(255, 200, 80, 0.18);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .warn-banner .warn-icon {
+      color: #f5c842;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .warn-banner p {
+      font-size: 0.84rem;
+      color: var(--on-surface-variant);
+      line-height: 1.6;
+      margin: 0 !important;
+    }
+
+    /* ── Back link ────────────────────────────────────────────────────── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--on-surface-variant);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 500px) {
+      .policy-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ── Navbar ──────────────────────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">Shiyos Media</a>
+        <ul class="navbar-links">
+          <li><a href="index.html">Downloader</a></li>
+          <li><a href="premium.html">Premium</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <div class="navbar-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── Main ──────────────────────────────────────────────────────────────── -->
+  <main>
+
+    <a href="index.html" class="back-link">
+      <span class="material-symbols-outlined" style="font-size:1rem">arrow_back</span>
+      Back to Downloader
+    </a>
+
+    <div class="policy-hero">
+      <h1><span class="gradient-text">Terms</span> of Service</h1>
+      <p class="updated">
+        <span class="material-symbols-outlined" style="font-size:0.9rem">calendar_today</span>
+        Last updated: 2026
+      </p>
+    </div>
+
+    <div class="policy-card">
+
+      <div class="warn-banner">
+        <span class="material-symbols-outlined warn-icon icon-filled">warning</span>
+        <p>By using Shiyos Media, you agree to these Terms of Service. Please read them carefully before using the
+          platform.</p>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">1</div>
+        <div class="section-body">
+          <h2>Acceptance of Terms</h2>
+          <p>By accessing or using Shiyos Media, you agree to be bound by these Terms of Service. If you do not agree
+            with any part of these terms, you may not use the service.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">2</div>
+        <div class="section-body">
+          <h2>Use of Service</h2>
+          <p>This tool is intended for personal, non-commercial use only. You are solely responsible for how you use
+            downloaded content and must comply with all applicable laws and platform terms.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">3</div>
+        <div class="section-body">
+          <h2>Copyright Disclaimer</h2>
+          <p>Shiyos Media does not host, distribute, or store any content. Users must ensure they have the legal right
+            to download and use any media. Downloading copyrighted material without permission may violate the Digital
+            Millennium Copyright Act (DMCA) and similar laws.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">4</div>
+        <div class="section-body">
+          <h2>Restrictions</h2>
+          <p>The following activities are strictly prohibited:</p>
+          <ul>
+            <li>Illegal use or distribution of downloaded content</li>
+            <li>Abuse, reverse-engineering, or exploitation of the service</li>
+            <li>Automated scraping, bots, or scripts targeting the platform</li>
+            <li>Attempting to overload or disrupt the service infrastructure</li>
+            <li>Circumventing usage limits or access controls</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">5</div>
+        <div class="section-body">
+          <h2>Service Availability</h2>
+          <p>We do not guarantee uninterrupted or error-free access to Shiyos Media. The service may be modified,
+            suspended, or discontinued at any time without notice or liability.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">6</div>
+        <div class="section-body">
+          <h2>Limitation of Liability</h2>
+          <p>Shiyos Media is provided "as is" without any warranties. We are not responsible for any direct, indirect,
+            incidental, or consequential damages resulting from your use of — or inability to use — the service.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <div class="section-num">7</div>
+        <div class="section-body">
+          <h2>Contact Us</h2>
+          <p>For questions about these Terms of Service, please reach out at: <a
+              href="mailto:info.shiyos@gmail.com">info.shiyos@gmail.com</a></p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Shiyos Media</span>
+      <span class="footer-copy">© 2026 Shiyos Media. The Digital Curator.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+
+</html>

@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premium — MediaFetch</title>
-  <meta name="description" content="Upgrade to MediaFetch Premium for faster downloads, no limits, and priority processing. Plans starting at ₹49/month." />
+  <title>Premium — Shiyos Media</title>
+  <meta name="description"
+    content="Upgrade to Shiyos Media Premium for faster downloads, no limits, and priority processing. Plans starting at ₹49/month." />
 
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
 
   <style>
-    main { flex: 1; padding: 8rem 1.5rem 5rem; max-width: 72rem; margin: 0 auto; width: 100%; }
+    main {
+      flex: 1;
+      padding: 8rem 1.5rem 5rem;
+      max-width: 72rem;
+      margin: 0 auto;
+      width: 100%;
+    }
 
     /* ── Hero ──────────────────────────────────────────────────────────── */
-    .premium-hero { text-align: center; margin-bottom: 4rem; }
+    .premium-hero {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
     .premium-hero h1 {
       font-size: clamp(2.4rem, 7vw, 4.2rem);
-      font-weight: 900; letter-spacing: -0.03em;
-      color: var(--on-surface); line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--on-surface);
+      line-height: 1.1;
       margin-bottom: 1rem;
     }
+
     .hero-gradient {
       background: linear-gradient(135deg, var(--primary), var(--tertiary));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .premium-hero p {
-      font-size: 1.05rem; color: var(--on-surface-variant);
-      max-width: 36rem; margin: 0 auto; line-height: 1.65;
+      font-size: 1.05rem;
+      color: var(--on-surface-variant);
+      max-width: 36rem;
+      margin: 0 auto;
+      line-height: 1.65;
     }
 
     /* ── Pricing Grid ──────────────────────────────────────────────────── */
@@ -44,53 +65,72 @@
       background: var(--surface-container);
       border-radius: 1rem;
       padding: 1.75rem 1.5rem;
-      display: flex; flex-direction: column;
-      border: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       position: relative;
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
     }
+
     .plan-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
     }
 
     .plan-card.featured {
       background: var(--surface-high);
-      border: 1.5px solid rgba(158,255,200,0.28);
-      box-shadow: 0 0 50px rgba(158,255,200,0.1);
+      border: 1.5px solid rgba(158, 255, 200, 0.28);
+      box-shadow: 0 0 50px rgba(158, 255, 200, 0.1);
       transform: scale(1.04);
       z-index: 2;
     }
-    .plan-card.featured:hover { transform: scale(1.04) translateY(-4px); }
+
+    .plan-card.featured:hover {
+      transform: scale(1.04) translateY(-4px);
+    }
 
     .plan-badge {
-      position: absolute; top: -0.85rem; left: 50%; transform: translateX(-50%);
+      position: absolute;
+      top: -0.85rem;
+      left: 50%;
+      transform: translateX(-50%);
       background: linear-gradient(135deg, var(--primary), var(--primary-container));
       color: var(--on-primary);
-      font-size: 0.65rem; font-weight: 800;
-      letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       padding: 0.3rem 0.85rem;
       border-radius: 9999px;
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .plan-period {
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--on-surface-variant);
       margin-bottom: 0.75rem;
     }
-    .plan-card.featured .plan-period { color: var(--primary); }
+
+    .plan-card.featured .plan-period {
+      color: var(--primary);
+    }
 
     .plan-price {
       font-family: 'Manrope', sans-serif;
-      font-size: 2.2rem; font-weight: 900;
+      font-size: 2.2rem;
+      font-weight: 900;
       color: var(--on-surface);
       margin-bottom: 0.25rem;
       line-height: 1;
     }
-    .plan-card.featured .plan-price { font-size: 2.6rem; }
+
+    .plan-card.featured .plan-price {
+      font-size: 2.6rem;
+    }
 
     .plan-original {
       font-size: 0.8rem;
@@ -98,19 +138,34 @@
       text-decoration: line-through;
       margin-bottom: 1.25rem;
     }
-    .plan-spacer { margin-bottom: 1.25rem; }
+
+    .plan-spacer {
+      margin-bottom: 1.25rem;
+    }
 
     .plan-features {
-      list-style: none; display: flex; flex-direction: column; gap: 0.6rem;
-      flex: 1; margin-bottom: 1.5rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      flex: 1;
+      margin-bottom: 1.5rem;
     }
+
     .plan-features li {
-      display: flex; align-items: center; gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 0.82rem;
       color: var(--on-surface);
       opacity: 0.85;
     }
-    .plan-card.featured .plan-features li { opacity: 1; font-weight: 500; }
+
+    .plan-card.featured .plan-features li {
+      opacity: 1;
+      font-weight: 500;
+    }
+
     .plan-features .check-icon {
       font-size: 0.9rem;
       color: var(--primary);
@@ -118,28 +173,40 @@
     }
 
     .plan-btn {
-      display: block; width: 100%;
+      display: block;
+      width: 100%;
       padding: 0.85rem;
       border-radius: 0.625rem;
       font-family: 'Manrope', sans-serif;
-      font-size: 0.88rem; font-weight: 800;
-      border: none; cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
       transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
     }
-    .plan-btn:active { transform: scale(0.96); }
+
+    .plan-btn:active {
+      transform: scale(0.96);
+    }
 
     .btn-default {
       background: var(--surface-highest);
       color: var(--on-secondary-container);
     }
-    .btn-default:hover { background: var(--outline-variant); }
+
+    .btn-default:hover {
+      background: var(--outline-variant);
+    }
 
     .btn-featured {
       background: linear-gradient(135deg, var(--primary), var(--primary-container));
       color: var(--on-primary);
       padding: 1rem;
     }
-    .btn-featured:hover { box-shadow: 0 0 24px rgba(158,255,200,0.4); }
+
+    .btn-featured:hover {
+      box-shadow: 0 0 24px rgba(158, 255, 200, 0.4);
+    }
 
     /* ── Trust Badges ─────────────────────────────────────────────────── */
     .trust-grid {
@@ -147,369 +214,556 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
+
     .trust-card {
       background: var(--surface-container);
-      border: 1px solid rgba(255,255,255,0.04);
+      border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 1rem;
       padding: 2rem 1.5rem;
-      display: flex; flex-direction: column; align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .trust-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+
+    .trust-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
 
     .trust-icon-wrap {
-      width: 3rem; height: 3rem;
+      width: 3rem;
+      height: 3rem;
       border-radius: 50%;
-      background: rgba(158,255,200,0.1);
-      display: flex; align-items: center; justify-content: center;
+      background: rgba(158, 255, 200, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 1rem;
     }
+
     .trust-card h4 {
-      font-size: 0.95rem; font-weight: 800;
+      font-size: 0.95rem;
+      font-weight: 800;
       color: var(--on-surface);
       margin-bottom: 0.4rem;
     }
-    .trust-card p { font-size: 0.82rem; color: var(--on-surface-variant); line-height: 1.5; }
 
-    /* ── Payment Modal Overlay ──────────────────────────────────────── */
+    .trust-card p {
+      font-size: 0.82rem;
+      color: var(--on-surface-variant);
+      line-height: 1.5;
+    }
+
+    /* ── Payment Modal ──────────────────────────────────────────────── */
     .modal-overlay {
-      position: fixed; inset: 0; z-index: 200;
-      background: rgba(0,0,0,0.65);
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.65);
       backdrop-filter: blur(8px);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 1rem;
       animation: fadeIn 0.25s ease;
     }
+
     .modal-box {
       background: var(--surface-high);
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 1.25rem;
       padding: 2rem;
-      width: 100%; max-width: 28rem;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-      animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
+      width: 100%;
+      max-width: 28rem;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
+
     @keyframes slideUp {
-      from { opacity:0; transform: translateY(2rem) scale(0.97); }
-      to   { opacity:1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(2rem) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
+
     .modal-title {
-      font-size: 1.35rem; font-weight: 900;
+      font-size: 1.35rem;
+      font-weight: 900;
       color: var(--on-surface);
       margin-bottom: 0.35rem;
     }
-    .modal-subtitle { font-size: 0.85rem; color: var(--on-surface-variant); margin-bottom: 1.5rem; }
-    .modal-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-    .modal-field label { font-size: 0.78rem; font-weight: 600; color: var(--on-surface-variant); }
+
+    .modal-subtitle {
+      font-size: 0.85rem;
+      color: var(--on-surface-variant);
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-field label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--on-surface-variant);
+    }
+
     .modal-field input {
       background: var(--surface-container);
       border: 1px solid var(--outline-variant);
       border-radius: 0.6rem;
       padding: 0.75rem 1rem;
       color: var(--on-surface);
-      font-family: 'Inter', sans-serif; font-size: 0.9rem;
-      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
+
     .modal-field input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(158,255,200,0.1);
+      box-shadow: 0 0 0 3px rgba(158, 255, 200, 0.1);
     }
-    .modal-actions { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+
+    .modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
     .modal-cancel-btn {
-      flex: 1; padding: 0.85rem;
+      flex: 1;
+      padding: 0.85rem;
       background: var(--surface-highest);
       color: var(--on-surface-variant);
-      border: none; border-radius: 0.6rem;
-      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.9rem;
-      cursor: pointer; transition: background 0.2s;
+      border: none;
+      border-radius: 0.6rem;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .modal-cancel-btn:hover { background: var(--outline-variant); }
+
+    .modal-cancel-btn:hover {
+      background: var(--outline-variant);
+    }
+
     .modal-pay-btn {
-      flex: 2; padding: 0.85rem;
+      flex: 2;
+      padding: 0.85rem;
       background: linear-gradient(135deg, var(--primary), var(--primary-container));
       color: var(--on-primary);
-      border: none; border-radius: 0.6rem;
-      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 0.9rem;
-      cursor: pointer; transition: box-shadow 0.2s, transform 0.15s;
+      border: none;
+      border-radius: 0.6rem;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.15s;
     }
-    .modal-pay-btn:hover { box-shadow: 0 0 20px rgba(158,255,200,0.35); }
-    .modal-pay-btn:active { transform: scale(0.97); }
 
-    /* Coming soon banner */
-    .coming-soon-note {
-      font-size: 0.72rem; color: var(--on-surface-variant);
-      text-align: center; margin-top: 0.75rem;
+    .modal-pay-btn:hover {
+      box-shadow: 0 0 20px rgba(158, 255, 200, 0.35);
+    }
+
+    .modal-pay-btn:active {
+      transform: scale(0.97);
+    }
+
+    .modal-pay-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .secure-note {
+      font-size: 0.72rem;
+      color: var(--on-surface-variant);
+      text-align: center;
+      margin-top: 0.75rem;
     }
 
     /* ── Responsive ──────────────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
-      .plan-card.featured { transform: none; }
-      .plan-card.featured:hover { transform: translateY(-4px); }
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .plan-card.featured {
+        transform: none;
+      }
+
+      .plan-card.featured:hover {
+        transform: translateY(-4px);
+      }
     }
+
     @media (max-width: 640px) {
-      .pricing-grid { grid-template-columns: 1fr 1fr; }
-      .trust-grid { grid-template-columns: 1fr; }
+      .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
     }
+
     @media (max-width: 420px) {
-      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Toast Container -->
-<div id="toast-container" aria-live="polite"></div>
+  <!-- Toast Container -->
+  <div id="toast-container" aria-live="polite"></div>
 
-<!-- ── Navbar ──────────────────────────────────────────────────────────────── -->
-<header>
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-logo">MediaFetch</a>
-      <ul class="navbar-links">
-        <li><a href="index.html">Downloader</a></li>
-        <li><a href="premium.html" class="active">Premium</a></li>
-        <li><a href="support.html">Support</a></li>
-      </ul>
-      <div class="navbar-actions">
-        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-          <span class="material-symbols-outlined">light_mode</span>
-        </button>
+  <!-- ── Navbar ──────────────────────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">Shiyos Media</a>
+        <ul class="navbar-links">
+          <li><a href="index.html">Downloader</a></li>
+          <li><a href="premium.html" class="active">Premium</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <div class="navbar-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── Main ──────────────────────────────────────────────────────────────── -->
+  <main>
+
+    <!-- Hero -->
+    <div class="premium-hero">
+      <h1>Upgrade to <span class="hero-gradient">Premium</span></h1>
+      <p>Unlock the full power of The Digital Curator. No limits, maximum speed, and priority processing for your media
+        workflow.</p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="pricing-grid" id="pricing-grid">
+
+      <!-- ₹49 / 1 Month -->
+      <div class="plan-card">
+        <p class="plan-period">1 Month</p>
+        <p class="plan-price">₹49</p>
+        <div class="plan-spacer"></div>
+        <ul class="plan-features">
+          <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
+        </ul>
+        <button class="plan-btn btn-default" data-plan="1 Month" data-price="49" data-amount="4900">Upgrade Now</button>
+      </div>
+
+      <!-- ₹119 / 3 Months -->
+      <div class="plan-card">
+        <p class="plan-period">3 Months</p>
+        <p class="plan-price">₹119</p>
+        <p class="plan-original">₹399</p>
+        <ul class="plan-features">
+          <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
+        </ul>
+        <button class="plan-btn btn-default" data-plan="3 Months" data-price="119" data-amount="11900">Upgrade
+          Now</button>
+      </div>
+
+      <!-- ₹399 / 6 Months -->
+      <div class="plan-card">
+        <p class="plan-period">6 Months</p>
+        <p class="plan-price">₹399</p>
+        <p class="plan-original">₹699</p>
+        <ul class="plan-features">
+          <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
+        </ul>
+        <button class="plan-btn btn-default" data-plan="6 Months" data-price="399" data-amount="39900">Upgrade
+          Now</button>
+      </div>
+
+      <!-- ₹999 / 1 Year — FEATURED -->
+      <div class="plan-card featured">
+        <span class="plan-badge">🏆 Best Value</span>
+        <p class="plan-period">1 Year</p>
+        <p class="plan-price">₹999</p>
+        <p class="plan-original">₹1899</p>
+        <ul class="plan-features">
+          <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">new_releases</span>Early access features
+          </li>
+        </ul>
+        <button class="plan-btn btn-featured" data-plan="1 Year" data-price="999" data-amount="99900">Upgrade
+          Now</button>
+      </div>
+
+      <!-- ₹1899 / 2 Years -->
+      <div class="plan-card">
+        <p class="plan-period">2 Years</p>
+        <p class="plan-price">₹1,899</p>
+        <p class="plan-original">₹3,499</p>
+        <ul class="plan-features">
+          <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
+          <li><span class="material-symbols-outlined check-icon icon-filled">new_releases</span>Early access features
+          </li>
+        </ul>
+        <button class="plan-btn btn-default" data-plan="2 Years" data-price="1899" data-amount="189900">Upgrade
+          Now</button>
+      </div>
+
+    </div><!-- /pricing-grid -->
+
+    <!-- Trust Badges -->
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon-wrap">
+          <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">security</span>
+        </div>
+        <h4>Secure Payments</h4>
+        <p>Enterprise-grade encryption for all transactions. Powered by Razorpay.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-wrap">
+          <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">flash_on</span>
+        </div>
+        <h4>Instant Activation</h4>
+        <p>Premium features unlock immediately after successful payment.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-wrap">
+          <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">support_agent</span>
+        </div>
+        <h4>Priority Support</h4>
+        <p>Get help in minutes with our dedicated VIP support queue.</p>
       </div>
     </div>
-  </nav>
-</header>
 
-<!-- ── Main ────────────────────────────────────────────────────────────────── -->
-<main>
+  </main>
 
-  <!-- Hero -->
-  <div class="premium-hero">
-    <h1>Upgrade to <span class="hero-gradient">Premium</span></h1>
-    <p>Unlock the full power of The Digital Curator. No limits, maximum speed, and priority processing for your media workflow.</p>
-  </div>
-
-  <!-- Pricing Grid -->
-  <div class="pricing-grid" id="pricing-grid">
-
-    <!-- ₹49 / 1 Month -->
-    <div class="plan-card">
-      <p class="plan-period">1 Month</p>
-      <p class="plan-price">₹49</p>
-      <div class="plan-spacer"></div>
-      <ul class="plan-features">
-        <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
-      </ul>
-      <button class="plan-btn btn-default" data-plan="1 Month" data-price="49" data-amount="4900">Upgrade Now</button>
-    </div>
-
-    <!-- ₹119 / 3 Months -->
-    <div class="plan-card">
-      <p class="plan-period">3 Months</p>
-      <p class="plan-price">₹119</p>
-      <p class="plan-original">₹147</p>
-      <ul class="plan-features">
-        <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
-      </ul>
-      <button class="plan-btn btn-default" data-plan="3 Months" data-price="119" data-amount="11900">Upgrade Now</button>
-    </div>
-
-    <!-- ₹399 / 6 Months -->
-    <div class="plan-card">
-      <p class="plan-period">6 Months</p>
-      <p class="plan-price">₹399</p>
-      <p class="plan-original">₹294</p>
-      <ul class="plan-features">
-        <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
-      </ul>
-      <button class="plan-btn btn-default" data-plan="6 Months" data-price="399" data-amount="39900">Upgrade Now</button>
-    </div>
-
-    <!-- ₹999 / 1 Year — FEATURED -->
-    <div class="plan-card featured">
-      <span class="plan-badge">🏆 Best Value</span>
-      <p class="plan-period">1 Year</p>
-      <p class="plan-price">₹999</p>
-      <p class="plan-original">₹588</p>
-      <ul class="plan-features">
-        <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">new_releases</span>Early access features</li>
-      </ul>
-      <button class="plan-btn btn-featured" data-plan="1 Year" data-price="999" data-amount="99900">Upgrade Now</button>
-    </div>
-
-    <!-- ₹1899 / 2 Years -->
-    <div class="plan-card">
-      <p class="plan-period">2 Years</p>
-      <p class="plan-price">₹1,899</p>
-      <p class="plan-original">₹1,176</p>
-      <ul class="plan-features">
-        <li><span class="material-symbols-outlined check-icon icon-filled">bolt</span>Faster downloads</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">all_inclusive</span>No limits</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">star</span>Priority processing</li>
-        <li><span class="material-symbols-outlined check-icon icon-filled">new_releases</span>Early access features</li>
-      </ul>
-      <button class="plan-btn btn-default" data-plan="2 Years" data-price="1899" data-amount="189900">Upgrade Now</button>
-    </div>
-
-  </div><!-- /pricing-grid -->
-
-  <!-- Trust Badges -->
-  <div class="trust-grid">
-    <div class="trust-card">
-      <div class="trust-icon-wrap">
-        <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">security</span>
+  <!-- ── Payment Checkout Modal ──────────────────────────────────────────────── -->
+  <div id="payment-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h2 class="modal-title" id="modal-title">Complete Your Upgrade</h2>
+      <p class="modal-subtitle" id="modal-subtitle">Upgrading to Premium — ₹0</p>
+      <div class="modal-field">
+        <label for="modal-name">Full Name</label>
+        <input id="modal-name" type="text" placeholder="Your name" autocomplete="name" />
       </div>
-      <h4>Secure Payments</h4>
-      <p>Enterprise-grade encryption for all transactions. Powered by Razorpay.</p>
-    </div>
-    <div class="trust-card">
-      <div class="trust-icon-wrap">
-        <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">flash_on</span>
+      <div class="modal-field">
+        <label for="modal-email">Email Address <span style="color:var(--error)">*</span></label>
+        <input id="modal-email" type="email" placeholder="hello@example.com" required autocomplete="email" />
       </div>
-      <h4>Instant Activation</h4>
-      <p>Premium features unlock immediately after successful payment.</p>
-    </div>
-    <div class="trust-card">
-      <div class="trust-icon-wrap">
-        <span class="material-symbols-outlined icon-filled" style="color:var(--primary)">support_agent</span>
+      <div class="modal-field">
+        <label for="modal-phone">Phone Number <span style="color:var(--error)">*</span></label>
+        <input id="modal-phone" type="tel" placeholder="+91 98765 43210" required autocomplete="tel" />
       </div>
-      <h4>Priority Support</h4>
-      <p>Get help in minutes with our dedicated VIP support queue.</p>
+      <div class="modal-actions">
+        <button class="modal-cancel-btn" id="modal-cancel">Cancel</button>
+        <button class="modal-pay-btn" id="modal-pay">Proceed to Pay</button>
+      </div>
+      <p class="secure-note">🔒 Secured by Razorpay · 256-bit SSL encryption</p>
     </div>
   </div>
 
-</main>
-
-<!-- ── Payment Checkout Modal ──────────────────────────────────────────────── -->
-<div id="payment-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div class="modal-box">
-    <h2 class="modal-title" id="modal-title">Complete Your Upgrade</h2>
-    <p class="modal-subtitle" id="modal-subtitle">Upgrading to Premium — ₹0</p>
-    <div class="modal-field">
-      <label for="modal-name">Full Name</label>
-      <input id="modal-name" type="text" placeholder="Your name" autocomplete="name" />
+  <!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Shiyos Media</span>
+      <span class="footer-copy">© 2026 Shiyos Media. A product of Shiyos Technologies.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="support.html">Support</a>
+      </div>
     </div>
-    <div class="modal-field">
-      <label for="modal-email">Email Address <span style="color:var(--error)">*</span></label>
-      <input id="modal-email" type="email" placeholder="hello@example.com" required autocomplete="email" />
-    </div>
-    <div class="modal-field">
-      <label for="modal-phone">Phone Number <span style="color:var(--error)">*</span></label>
-      <input id="modal-phone" type="tel" placeholder="+91 98765 43210" required autocomplete="tel" />
-    </div>
-    <div class="modal-actions">
-      <button class="modal-cancel-btn" id="modal-cancel">Cancel</button>
-      <button class="modal-pay-btn" id="modal-pay">Proceed to Pay</button>
-    </div>
-    <p class="coming-soon-note">🔒 Razorpay secure checkout · Payment integration coming soon</p>
-  </div>
-</div>
+  </footer>
 
-<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
-<footer class="footer">
-  <div class="footer-inner">
-    <span class="footer-logo">MediaFetch</span>
-    <span class="footer-copy">© 2024 MediaFetch. The Digital Curator.</span>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="support.html">Support</a>
-    </div>
-  </div>
-</footer>
+  <script src="js/theme.js"></script>
+  <!-- Razorpay Checkout JS SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    // ── API Base (auto-detect local vs production) ────────────────────────────
+    const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const API_BASE = IS_LOCAL ? 'http://localhost:3001' : 'https://mediafetch-api.onrender.com';
 
-<script src="js/theme.js"></script>
-<script>
-  // ── Toast helper ──────────────────────────────────────────────────────────
-  function showToast(message, type = 'info', duration = 4000) {
-    const container = document.getElementById('toast-container');
-    const toast = document.createElement('div');
-    const iconMap = { success: 'check_circle', error: 'error', info: 'info' };
-    const colorMap = { success: 'var(--primary)', error: 'var(--error)', info: 'var(--tertiary)' };
-    toast.className = `toast ${type}`;
-    toast.innerHTML = `<span class="material-symbols-outlined icon-filled" style="color:${colorMap[type]};font-size:1.1rem">${iconMap[type]}</span><span>${message}</span>`;
-    container.appendChild(toast);
-    setTimeout(() => {
-      toast.classList.add('fade-out');
-      toast.addEventListener('animationend', () => toast.remove());
-    }, duration);
-  }
-
-  // ── Modal state ───────────────────────────────────────────────────────────
-  let currentPlan = null;
-
-  function openModal(plan, price, amount) {
-    currentPlan = { plan, price, amount };
-    document.getElementById('modal-subtitle').textContent = `Upgrading to ${plan} Premium — ₹${price.toLocaleString('en-IN')}`;
-    document.getElementById('payment-modal').classList.remove('hidden');
-    document.getElementById('modal-name').focus();
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    document.getElementById('payment-modal').classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  // ── Wire plan buttons ─────────────────────────────────────────────────────
-  document.querySelectorAll('.plan-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const plan   = btn.dataset.plan;
-      const price  = parseInt(btn.dataset.price);
-      const amount = parseInt(btn.dataset.amount);
-      openModal(plan, price, amount);
-    });
-  });
-
-  // ── Modal close ───────────────────────────────────────────────────────────
-  document.getElementById('modal-cancel').addEventListener('click', closeModal);
-  document.getElementById('payment-modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) closeModal();
-  });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-  // ── Modal pay ─────────────────────────────────────────────────────────────
-  document.getElementById('modal-pay').addEventListener('click', () => {
-    const name  = document.getElementById('modal-name').value.trim();
-    const email = document.getElementById('modal-email').value.trim();
-    const phone = document.getElementById('modal-phone').value.trim();
-
-    if (!email || !phone) {
-      showToast('Please enter your email and phone number.', 'error');
-      return;
+    // ── Toast helper ──────────────────────────────────────────────────────────
+    function showToast(message, type = 'info', duration = 5000) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const iconMap = { success: 'check_circle', error: 'error', info: 'info' };
+      const colorMap = { success: 'var(--primary)', error: 'var(--error)', info: 'var(--tertiary)' };
+      toast.className = `toast ${type}`;
+      toast.innerHTML = `<span class="material-symbols-outlined icon-filled" style="color:${colorMap[type]};font-size:1.1rem">${iconMap[type]}</span><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add('fade-out');
+        toast.addEventListener('animationend', () => toast.remove());
+      }, duration);
     }
 
-    // For now, show a "coming soon" toast since Razorpay key is not configured
-    closeModal();
-    showToast(`Thank you ${name || ''}! Payment gateway coming soon. We'll notify you at ${email}.`, 'success', 6000);
+    // ── Modal state ───────────────────────────────────────────────────────────
+    let currentPlan = null;
 
-    // ── Razorpay integration (uncomment when you have a key) ──────────────
-    // const options = {
-    //   key: 'YOUR_RAZORPAY_KEY_ID',
-    //   amount: currentPlan.amount,
-    //   currency: 'INR',
-    //   name: 'MediaFetch',
-    //   description: `${currentPlan.plan} Premium`,
-    //   prefill: { name, email, contact: phone },
-    //   theme: { color: '#9effc8' },
-    //   handler: function(response) {
-    //     closeModal();
-    //     showToast(`Payment successful! ID: ${response.razorpay_payment_id}`, 'success', 7000);
-    //   }
-    // };
-    // const rzp = new Razorpay(options);
-    // rzp.open();
-  });
-</script>
+    function openModal(plan, price, amount) {
+      currentPlan = { plan, price, amount };
+      document.getElementById('modal-subtitle').textContent =
+        `Upgrading to ${plan} Premium — ₹${price.toLocaleString('en-IN')}`;
+      document.getElementById('payment-modal').classList.remove('hidden');
+      document.getElementById('modal-name').focus();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('payment-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+      const payBtn = document.getElementById('modal-pay');
+      payBtn.disabled = false;
+      payBtn.textContent = 'Proceed to Pay';
+    }
+
+    // ── Wire plan buttons ─────────────────────────────────────────────────────
+    document.querySelectorAll('.plan-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openModal(btn.dataset.plan, parseInt(btn.dataset.price), parseInt(btn.dataset.amount));
+      });
+    });
+
+    // ── Close modal ───────────────────────────────────────────────────────────
+    document.getElementById('modal-cancel').addEventListener('click', closeModal);
+    document.getElementById('payment-modal').addEventListener('click', e => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ── PAY BUTTON — Full Razorpay Integration ────────────────────────────────
+    document.getElementById('modal-pay').addEventListener('click', () => {
+      const name = document.getElementById('modal-name').value.trim();
+      const email = document.getElementById('modal-email').value.trim();
+      const phone = document.getElementById('modal-phone').value.trim().replace(/\s+/g, '');
+
+      // Validate inputs
+      if (!email || !phone) {
+        showToast('Please enter your email and phone number.', 'error'); return;
+      }
+      if (!/^\+?\d{7,13}$/.test(phone)) {
+        showToast('Enter a valid phone number (10–13 digits).', 'error'); return;
+      }
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        showToast('Enter a valid email address.', 'error'); return;
+      }
+
+      const payBtn = document.getElementById('modal-pay');
+      payBtn.disabled = true;
+      payBtn.textContent = 'Creating order…';
+
+      // ── STEP 1: Create Razorpay order on the backend ──────────────────────
+      fetch(`${API_BASE}/api/payment/create-order`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: currentPlan.amount,   // in paise: ₹49 = 4900
+          plan: currentPlan.plan,
+          name, email, phone
+        })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.error) throw new Error(data.error);
+
+          payBtn.textContent = 'Opening Razorpay…';
+
+          // ── STEP 2: Launch Razorpay checkout popup ────────────────────────
+          const rzp = new Razorpay({
+            key: data.keyId,          // rzp_live_SOi4Ez46jAX9wN (safe to expose)
+            amount: data.amount,         // in paise
+            currency: data.currency,       // INR
+            name: 'Shiyos Media',
+            description: `${currentPlan.plan} Premium`,
+            order_id: data.orderId,        // Razorpay order ID from backend
+            prefill: { name, email, contact: phone },
+            notes: { plan: currentPlan.plan },
+            theme: { color: '#9effc8' },
+
+            // ── STEP 3: Verify payment signature on backend ───────────────────
+            handler: function (response) {
+              fetch(`${API_BASE}/api/payment/verify`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature
+                })
+              })
+                .then(r => r.json())
+                .then(result => {
+                  closeModal();
+                  if (result.success) {
+                    showToast(
+                      `🎉 Payment successful! ID: ${response.razorpay_payment_id}. Welcome to Premium${name ? ', ' + name : ''}!`,
+                      'success', 9000
+                    );
+                  } else {
+                    showToast('Payment received but verification failed. Please contact support.', 'error', 8000);
+                  }
+                })
+                .catch(() => {
+                  closeModal();
+                  showToast('Verification error. Contact support with your Payment ID.', 'error', 8000);
+                });
+            },
+
+            modal: {
+              ondismiss: function () {
+                showToast('Payment cancelled.', 'info', 3000);
+                closeModal();
+              }
+            }
+          });
+
+          rzp.on('payment.failed', function (resp) {
+            closeModal();
+            showToast(`Payment failed: ${resp.error.description}`, 'error', 7000);
+          });
+
+          rzp.open();
+        })
+        .catch(err => {
+          console.error('[payment error]', err.message);
+          showToast('Cannot connect to payment server. Make sure backend is running.', 'error');
+          payBtn.disabled = false;
+          payBtn.textContent = 'Proceed to Pay';
+        });
+    });
+  </script>
 </body>
+
 </html>

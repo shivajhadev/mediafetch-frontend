@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   MediaFetch — Theme Toggle (Dark / Light)
+   Shiyos Media — Theme Toggle (Dark / Light)
    ═══════════════════════════════════════════════════════════════════════════ */
 
 (function () {
-  const STORAGE_KEY = 'mediafetch-theme';
+  const STORAGE_KEY = 'shiyos-theme';
 
   function getTheme() {
     return localStorage.getItem(STORAGE_KEY) || 'dark';
